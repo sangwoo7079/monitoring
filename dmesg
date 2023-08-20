@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+#
+#   This program is free software; you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation; either version 2 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License along
+#   with this program; if not, write to the Free Software Foundation, Inc.,
+#   51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+
+import os
+import re
+import sys
+
+from datetime import datetime, timedelta
+
+try:
+    import cPickle as pickle
+except ImportError:
+    import pickle
+
+######################################################################################################
+# HELPERS
+######################################################################################################
+
+def convert_time(timestamp):
+    _datetime_format = "%Y-%m-%d %H:%M:%S"
+    now = datetime.now()
+    uptime_diff = None
+    try:
+        with open('/proc/uptime') as f:
+            uptime_diff = f.read().strip().split()[0]
+    except IndexError:
+        return
+
+    else:
+        try:
+            uptime = now - timedelta(seconds=int(uptime_diff.split('.')[0]), microseconds=int(uptime_diff.split('.')[1]))
+        except IndexError:
+            return
+    try:
+        seconds = int(timestamp.split('.')[0])
+        nanoseconds = int(timestamp.split('.')[1])
+        microseconds = int(round(nanoseconds * 0.001))
+        _t = uptime + timedelta(seconds=seconds, microseconds=microseconds)
+    except IndexError:
+        pass
+    else:
+        return _t.strftime(_datetime_format)
+
+def get_status_data(statusfile):
+    data = {}
+    data["timestamp"] = -1
+    if os.path.exists(statusfile):
+        mtime_statusfile = os.stat(statusfile).st_mtime
+        mtime_kmsg = os.stat("/dev/kmsg").st_mtime
+        if not mtime_statusfile < mtime_kmsg:
+           try:
+               data = pickle.load(open(statusfile, "rb"))
+           except:
+               sys.stderr.write("except: unable to read statusfile %s" % statusfile)
+    return data
+
+
+######################################################################################################
+# MAIN
+######################################################################################################
+
+EXECUTABLE = os.path.basename(__file__)
+
+dmesg = os.popen('dmesg -l err,crit')
+
+# detect problems
+kernel_problems = {}
+kernel_problems["general protection fault"] = re.compile("^.*general protection fault.*$")
+kernel_problems["bug"] = re.compile(".*(kernel BUG at|double fault:|Badness at|[Uu]nable to handle kernel|" +
+                                    "sysctl table check failed|------------[ cut here ]------------|Oops:).*$")
+kernel_problems["host_oom"] = re.compile(".*([oO]ut of memory: Kill process|oom_reaper:).*$")
+kernel_problems["ioerror"] = re.compile(r".*(end_request|print_req_error: .*, dev ..*, sector ..*|" +
+                                        "error on device ..*, logical block ..*|I/O error|critical medium error.*dev).*")
+
+# ignore problems
+ignore_problems = {}
+ignore_problems["megaraid_sas"] = re.compile(".*megaraid_sas.*SUCCESS for SCSI.*$")
+ignore_problems["ip_local_port_range"] = re.compile(".*ip_local_port_range.*start/end values.*$")
+ignore_problems["acpi"] = re.compile(".*ACPI (Error|Exception): .*(IPMI|Method parse/execution failed|AE_NOT_EXIST).*$")
+ignore_problems["edac"] = re.compile(".*EDAC sbridge: .*(mci handler|error -22).*$")
+ignore_problems["cgroup_oom"] = re.compile("^(Memory cgroup out of memory: Kill process|Killed process).*$")
+ignore_problems["port_speed"] = re.compile(".*speed changed to.*$")
+
+# dmesg format
+# [80508.690871] kauditd_printk_skb: 2 callbacks suppressed
+parse_dmesg = re.compile(r"\[\s*(?P<timestamp>\d+\.\d+)\] (?P<msg>.*)$")
+
+pickle_name = ""
+if (len(sys.argv) > 1):
+    pickle_name = sys.argv[1]
+
+status_file = "/etc/zabbix/zabbix_agent2.d/script/%s_%s.pickle" % (EXECUTABLE, pickle_name)
+status_data = get_status_data(status_file)
+
+latest_time_stamp = status_data["timestamp"]
+
+status = "OK"
+matched = []
+
+total_lines = 0
+valid_lines = 0
+ignore_line = False
+explicit_err = 0
+while True:
+    line_str = dmesg.readline()
+    if not (line_str):
+        break
+
+    total_lines += 1
+    m = parse_dmesg.match(line_str)
+    if not m:
+        continue
+
+    valid_lines += 1
+    current_time_stamp = float(m.group("timestamp"))
+    msg = m.group("msg")
+
+    if current_time_stamp > latest_time_stamp:
+        latest_time_stamp = current_time_stamp
+        for i, iregex in ignore_problems.items():
+            if iregex.match(msg):
+                ignore_line = True
+                break
+
+        if ignore_line:
+            ignore_line = False
+            continue
+
+        """
+        PRD region only
+        """
+        for ident, regex in kernel_problems.items():
+            if regex.match(msg):
+                explicit_err += 1
+                matched.append("[%s] %s\n" % (convert_time(str(current_time_stamp)), msg) )
+                break
+
+status_data["timestamp"] = latest_time_stamp
+
+if (len(matched) == 0 and valid_lines > 0) or (total_lines == 0):
+    status = "OK"
+    matched = []
+    matched.append("latest check %s" % convert_time(str(latest_time_stamp)))
+
+elif valid_lines <= 0:
+    status = "EXCEPT"
+    matched = []
+    matched.append("parsing failed")
+elif explicit_err > 0:
+    status = "ERROR"
+
+try:
+    pickle.dump(status_data, open(status_file, "wb"))
+except:
+    status="EXCEPT"
+    matched.append("storing status to %s failed" % status_file)
+
+sys.stdout.write("%s - (err/crit %d) - %s\n" % (status, explicit_err, ", ".join(matched)))

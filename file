@@ -1,0 +1,22 @@
+  # 로그 연동
+  filelog:
+    include: [C:\inetpub\logs\LogFiles\*.log]
+
+
+
+
+ # Log 연동
+  splunk_hec/logs:
+    token: "3baea91c-66ef-4803-8513-cdec6bc05863"  
+    endpoint: "https://http-inputs-qoo10.splunkcloud.com/services/collector"
+    source: "otel"
+    sourcetype: "otel"
+    index: "main"
+    max_connections: 20
+    disable_compression: false
+    timeout: 10s
+    tls:
+      insecure_skip_verify: true
+
+
+      exporters: [splunk_hec, splunk_hec/profiling, splunk_hec/logs]

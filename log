@@ -1,0 +1,928 @@
+10-30-2023 15:19:30.985 +0900 INFO  loader [0 MainThread] - win-service: Starting as a Windows service: will run various system checks first...
+10-30-2023 15:19:30.987 +0900 INFO  loader [0 MainThread] - win-service: Splunk starting as a non-administrator
+10-30-2023 15:19:30.987 +0900 INFO  loader [0 MainThread] - Automatic migration of modular inputs
+10-30-2023 15:19:31.018 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'pre-flight check'
+10-30-2023 15:19:33.249 +0900 INFO  loader [0 MainThread] - win-service: Command pre-flight-checks ran successfully.
+10-30-2023 15:19:33.250 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'validating XML'
+10-30-2023 15:19:33.293 +0900 INFO  loader [0 MainThread] - win-service: Command check-xml-files ran successfully.
+10-30-2023 15:19:33.293 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'starting server'
+10-30-2023 15:19:33.297 +0900 INFO  ServerConfig [0 MainThread] - Will generate GUID, as none found on this server.
+10-30-2023 15:19:33.297 +0900 INFO  ServerConfig [0 MainThread] - My newly generated GUID is 8A424A06-B353-4CF7-80CD-BF8314BB2A51
+10-30-2023 15:19:33.300 +0900 INFO  ServerConfig [0 MainThread] - My server name is "QW-WWW-A-001".
+10-30-2023 15:19:33.301 +0900 INFO  ServerConfig [0 MainThread] - Found no site defined in server.conf
+10-30-2023 15:19:33.301 +0900 INFO  ServerConfig [0 MainThread] - Found no hostname options in server.conf. Will attempt to use default for now.
+10-30-2023 15:19:33.301 +0900 INFO  ServerConfig [0 MainThread] - Host name option is "".
+10-30-2023 15:19:33.301 +0900 INFO  ServerConfig [0 MainThread] - My hostname is "QW-WWW-A-001".
+10-30-2023 15:19:33.313 +0900 WARN  SSLOptions [0 MainThread] - server.conf/[sslConfig]/sslVerifyServerCert is false disabling certificate validation; must be set to "true" for increased security
+10-30-2023 15:19:33.319 +0900 INFO  ServerConfig [0 MainThread] - SSL session cache path  enabled 0 session timeout on SSL server 300.000
+10-30-2023 15:19:33.319 +0900 INFO  ServerConfig [0 MainThread] - Setting HTTP server compression state=on
+10-30-2023 15:19:33.319 +0900 INFO  ServerConfig [0 MainThread] - Setting HTTP client compression state=1 (true)
+10-30-2023 15:19:33.319 +0900 INFO  ServerConfig [0 MainThread] - disableSSLShutdown=0
+10-30-2023 15:19:33.319 +0900 INFO  ServerConfig [0 MainThread] - Setting search process to have long life span: enable_search_process_long_lifespan=1
+10-30-2023 15:19:33.319 +0900 INFO  ServerConfig [0 MainThread] - certificateStatusValidationMethod is not set, defaulting to none.
+10-30-2023 15:19:33.319 +0900 INFO  ServerConfig [0 MainThread] - Splunk is starting with EC-SSC disabled
+10-30-2023 15:19:33.320 +0900 INFO  loader [0 MainThread] - Management port is available for UDS connections
+10-30-2023 15:19:33.322 +0900 INFO  loader [0 MainThread] - Regex JIT enabled
+10-30-2023 15:19:33.322 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'audit subsystem'
+10-30-2023 15:19:33.323 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'main subsystem'
+10-30-2023 15:19:33.327 +0900 INFO  loader [1508 MainThread] - Service startup, checkpoint 'ingestion pipelines'
+10-30-2023 15:19:33.331 +0900 INFO  ServerRoles [1508 MainThread] - Declared role=universal_forwarder.
+10-30-2023 15:19:33.331 +0900 INFO  BundlesSetup [1508 MainThread] - Setup stats for C:\Program Files\SplunkUniversalForwarder\etc: wallclock_elapsed_msec=15, cpu_time_used=0.015625, shared_services_generation=1, shared_services_population=1
+10-30-2023 15:19:33.331 +0900 INFO  loader [1508 MainThread] - Splunkd starting (build 64e843ea36b1).
+10-30-2023 15:19:33.331 +0900 INFO  loader [1508 MainThread] - System info: Windows, QW-WWW-A-001, 0, 10, x64.
+10-30-2023 15:19:33.331 +0900 INFO  loader [1508 MainThread] - Detected 8 (virtual) CPUs, 4 CPU cores, and 16383MB RAM
+10-30-2023 15:19:33.331 +0900 INFO  loader [1508 MainThread] - Maximum number of threads (approximate): 8191
+10-30-2023 15:19:33.331 +0900 INFO  loader [1508 MainThread] - Getting configuration data from: C:\Program Files\SplunkUniversalForwarder\etc\myinstall\splunkd.xml
+10-30-2023 15:19:33.332 +0900 INFO  loader [1508 MainThread] - SPLUNK_MODULE_PATH environment variable not found - defaulting to C:\Program Files\SplunkUniversalForwarder\etc\modules
+10-30-2023 15:19:33.332 +0900 INFO  loader [1508 MainThread] - loading modules from C:\Program Files\SplunkUniversalForwarder\etc\modules
+10-30-2023 15:19:33.338 +0900 INFO  loader [1508 MainThread] - Writing out composite configuration file: C:\Program Files\SplunkUniversalForwarder\var\run\splunk\composite.xml
+10-30-2023 15:19:33.344 +0900 INFO  PipelineComponent [1508 MainThread] - Ingestion pipeline sets have been configured to use pipeline set policy=round_robin for multiple pipeline sets.
+10-30-2023 15:19:33.344 +0900 INFO  loader [1508 MainThread] - Service startup, checkpoint 'distributed deployment'
+10-30-2023 15:19:33.358 +0900 INFO  LMStackMgr [1508 MainThread] - Initializing CleMgr...
+10-30-2023 15:19:33.358 +0900 INFO  LicenseMgr [1508 MainThread] - Initing LicenseMgr
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - serverName=QW-WWW-A-001 guid=8A424A06-B353-4CF7-80CD-BF8314BB2A51
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - connection_timeout=30
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - send_timeout=30
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - receive_timeout=30
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - key=license_warnings_update_interval not found in licenser stanza of server.conf, defaulting=0
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - squash_threshold=2000
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - strict_pool_quota=1
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - key=pool_suggestion not found in licenser stanza of server.conf, defaulting=''
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - key=test_aws_metering not found in licenser stanza of server.conf, defaulting=0
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - key=test_aws_product_code not found in licenser stanza of server.conf, defaulting=0
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - lm_ping_interval=86400
+10-30-2023 15:19:33.358 +0900 INFO  LMConfig [1508 MainThread] - key=lm_uri not found in licenser stanza of server.conf, defaulting to empty array
+10-30-2023 15:19:33.358 +0900 INFO  LicenseMgr [1508 MainThread] - Initing LicenseMgr runContext_splunkd=true
+10-30-2023 15:19:33.358 +0900 INFO  LMStackMgr [1508 MainThread] - closing stack mgr
+10-30-2023 15:19:33.358 +0900 INFO  LMSlaveInfo [1508 MainThread] - all slaves cleared
+10-30-2023 15:19:33.358 +0900 INFO  LMStackMgr [1508 MainThread] - Initalized license_warnings_update_interval=auto
+10-30-2023 15:19:33.358 +0900 INFO  LMStackMgr [1508 MainThread] - License Manager supports Conditional Licensing Enforcement. For baked in CLE policies, window_period=60 days, max_violations=45, for stack size below 107374182400 bytes
+10-30-2023 15:19:33.358 +0900 INFO  LMLicense [1508 MainThread] - Applying default enforcement policy for free
+10-30-2023 15:19:33.358 +0900 INFO  LMStackMgr [1508 MainThread] - Added policy WinSz=30 Warnings=3 MaxSize=0 isDefault=1 features= for free
+10-30-2023 15:19:33.358 +0900 INFO  LMLicense [1508 MainThread] - Applying default enforcement policy for forwarder
+10-30-2023 15:19:33.358 +0900 INFO  LMStackMgr [1508 MainThread] - Added policy WinSz=30 Warnings=5 MaxSize=0 isDefault=1 features= for forwarder
+10-30-2023 15:19:33.362 +0900 INFO  LMStack [1508 MainThread] - Added type=forwarder license, from file=splunkforwarder.lic, to stack=forwarder of group=Forwarder
+10-30-2023 15:19:33.362 +0900 INFO  LMLicense [1508 MainThread] - Applying default enforcement policy for forwarder
+10-30-2023 15:19:33.362 +0900 INFO  LMStackMgr [1508 MainThread] - created stack='forwarder'
+10-30-2023 15:19:33.362 +0900 INFO  LMStackMgr [1508 MainThread] - Replaced with latest policy WinSz=30 Warnings=7 MaxSize=0 isDefault=1 features= for forwarder
+10-30-2023 15:19:33.374 +0900 INFO  LMConfig [1508 MainThread] - created default pool=auto_generated_pool_forwarder for stack=forwarder
+10-30-2023 15:19:33.374 +0900 INFO  LMStackMgr [1508 MainThread] - added default pool=auto_generated_pool_forwarder for stack=forwarder
+10-30-2023 15:19:33.388 +0900 INFO  LMConfig [1508 MainThread] - created default pool=auto_generated_pool_free for stack=free
+10-30-2023 15:19:33.388 +0900 INFO  LMStackMgr [1508 MainThread] - added default pool=auto_generated_pool_free for stack=free
+10-30-2023 15:19:33.388 +0900 INFO  ServerRoles [1508 MainThread] - Declared role=license_master.
+10-30-2023 15:19:33.388 +0900 INFO  ServerRoles [1508 MainThread] - Declared role=license_manager.
+10-30-2023 15:19:33.388 +0900 INFO  LMStackMgr [1508 MainThread] - Initialized hideQuotaWarning = "0"
+10-30-2023 15:19:33.388 +0900 INFO  LMStackMgr [1508 MainThread] - init completed [8A424A06-B353-4CF7-80CD-BF8314BB2A51,Forwarder,runContext_splunkd=true]
+10-30-2023 15:19:33.388 +0900 INFO  LicenseMgr [1508 MainThread] - StackMgr init complete...
+10-30-2023 15:19:33.388 +0900 INFO  LMTracker [1508 MainThread] - Setting default product type='enterprise'
+10-30-2023 15:19:33.388 +0900 INFO  LMTracker [1508 MainThread] - init'ing slaveId=8A424A06-B353-4CF7-80CD-BF8314BB2A51 label=QW-WWW-A-001 [30,30,self]
+10-30-2023 15:19:33.391 +0900 INFO  LMTracker [1508 MainThread] - enabling implicit feature set
+10-30-2023 15:19:33.391 +0900 INFO  LMTracker [1508 MainThread] - attempting to ping master=self from slave=8A424A06-B353-4CF7-80CD-BF8314BB2A51
+10-30-2023 15:19:33.391 +0900 INFO  LMSlaveInfo [1508 MainThread] - new slave='8A424A06-B353-4CF7-80CD-BF8314BB2A51' created
+10-30-2023 15:19:33.391 +0900 INFO  LMTracker [1508 MainThread] - setting masterGuid='8A424A06-B353-4CF7-80CD-BF8314BB2A51'
+10-30-2023 15:19:33.397 +0900 INFO  LMTracker [1508 MainThread] - attempting to contact master=self from slave=8A424A06-B353-4CF7-80CD-BF8314BB2A51 success
+10-30-2023 15:19:33.397 +0900 INFO  LicenseMgr [1508 MainThread] - Tracker init complete...
+10-30-2023 15:19:33.398 +0900 INFO  loader [1508 MainThread] - Setting SSL configuration.
+10-30-2023 15:19:33.399 +0900 INFO  loader [1508 MainThread] - Server supporting SSL versions TLS1.2
+10-30-2023 15:19:33.399 +0900 INFO  loader [1508 MainThread] - Using cipher suite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDH-ECDSA-AES256-GCM-SHA384:ECDH-ECDSA-AES128-GCM-SHA256:ECDH-ECDSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:AES128-SHA256
+10-30-2023 15:19:33.399 +0900 INFO  loader [1508 MainThread] - Using ECDH curves : prime256v1, secp384r1, secp521r1
+10-30-2023 15:19:33.564 +0900 WARN  UserManagerPro [1508 MainThread] - Can't find [distributedSearch] stanza in distsearch.conf, using default authtoken HTTP timeouts
+10-30-2023 15:19:33.591 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.592 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.592 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.594 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.594 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.595 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.628 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.628 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="MonitorNoHandle://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="disabled, index"
+10-30-2023 15:19:33.628 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.628 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="WinEventLog://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="start_from, use_old_eventlog_api, use_threads, thread_wait_time_msec, suppress_checkpoint, suppress_sourcename, suppress_keywords, suppress_type, suppress_task, suppress_opcode, current_only, batch_size, checkpointInterval, checkpointSync, channel_wait_time, disabled, evt_resolve_ad_obj, evt_skip_GUID_resolution, evt_dc_name, evt_dns_name, evt_resolve_ad_ds, evt_ad_cache_disabled, evt_ad_cache_exp, evt_ad_cache_exp_neg, evt_ad_cache_max_entries, evt_exclude_fields, evt_sid_cache_disabled, evt_sid_cache_exp, evt_sid_cache_exp_neg, evt_sid_cache_max_entries, wec_event_format, index, whitelist, blacklist, whitelist1, whitelist2, whitelist3, whitelist4, whitelist5, whitelist6, whitelist7, whitelist8, whitelist9, blacklist1, blacklist2, blacklist3, blacklist4, blacklist5, blacklist6, blacklist7, blacklist8, blacklist9, key, suppress_text, renderXml"
+10-30-2023 15:19:33.628 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.628 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="WinHostMon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="type, interval, disabled, index"
+10-30-2023 15:19:33.628 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.628 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="WinNetMon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="remoteAddress, process, user, addressFamily, packetType, direction, protocol, readInterval, driverBufferSize, userBufferSize, mode, multikvMaxEventCount, multikvMaxTimeMs, sid_cache_disabled, sid_cache_exp, sid_cache_exp_neg, sid_cache_max_entries, disabled, index"
+10-30-2023 15:19:33.628 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.628 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="WinPrintMon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="type, interval, baseline, disabled, index"
+10-30-2023 15:19:33.634 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.634 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="WinRegMon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="proc, hive, type, baseline, baseline_interval, disabled, index"
+10-30-2023 15:19:33.634 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.634 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="admon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="targetDc, startingNode, monitorSubtree, disabled, index, printSchema, baseline"
+10-30-2023 15:19:33.634 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.634 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="journald://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="journalctl-include-fields, journalctl-exclude-fields, journalctl-filter, journalctl-unit, journalctl-identifier, journalctl-priority, journalctl-boot, journalctl-facility, journalctl-grep, journalctl-user-unit, journalctl-dmesg, journalctl-quiet, journalctl-freetext"
+10-30-2023 15:19:33.634 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.634 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="logd://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="logd-backtrace, logd-debug, logd-info, logd-loss, logd-signpost, logd-predicate, logd-process, logd-source, logd-include-fields, logd-exclude-fields, logd-interval, logd-starttime, logd-freetext"
+10-30-2023 15:19:33.634 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.634 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="perfmon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="object, counters, nonmetric_counters, instances, interval, mode, samplingInterval, stats, disabled, showZeroValue, useEnglishOnly, useWinApiProcStats, formatString, usePDHFmtNoCap100"
+10-30-2023 15:19:33.634 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.634 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="powershell2://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="script, schedule"
+10-30-2023 15:19:33.634 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.634 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="powershell://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="script, schedule"
+10-30-2023 15:19:33.634 +0900 INFO  BundlesUtil [1508 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:19:33.634 +0900 INFO  SpecFiles [1508 MainThread] - Found external scheme definition for stanza="splunktcptoken://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="token"
+10-30-2023 15:19:33.754 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:33.754 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "MonitorNoHandle".
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "batch_size":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist1":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist2":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist3":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist4":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist5":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist6":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist7":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist8":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "blacklist9":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "checkpointInterval":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "checkpointSync":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "current_only":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_ad_cache_disabled":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_ad_cache_exp":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_ad_cache_exp_neg":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_ad_cache_max_entries":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_dc_name":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_dns_name":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_exclude_fields":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_resolve_ad_ds":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_resolve_ad_obj":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_sid_cache_disabled":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_sid_cache_exp":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_sid_cache_exp_neg":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_sid_cache_max_entries":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "evt_skip_GUID_resolution":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "renderXml":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "start_from":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "suppress_checkpoint":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "suppress_keywords":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "suppress_opcode":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "suppress_sourcename":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "suppress_task":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "suppress_text":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "suppress_type":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "thread_wait_time_msec":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "use_old_eventlog_api":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "use_threads":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "wec_event_format":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist1":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist2":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist3":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist4":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist5":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist6":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist7":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist8":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "whitelist9":
+10-30-2023 15:19:34.039 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "WinEventLog".
+10-30-2023 15:19:34.148 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.148 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "type":
+10-30-2023 15:19:34.148 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "WinHostMon".
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "addressFamily":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "direction":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "driverBufferSize":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "mode":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "multikvMaxEventCount":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "multikvMaxTimeMs":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "packetType":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "process":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "protocol":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "readInterval":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "remoteAddress":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "sid_cache_disabled":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "sid_cache_exp":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "sid_cache_exp_neg":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "sid_cache_max_entries":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "user":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "userBufferSize":
+10-30-2023 15:19:34.289 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "WinNetMon".
+10-30-2023 15:19:34.414 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "baseline":
+10-30-2023 15:19:34.414 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "interval":
+10-30-2023 15:19:34.414 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.414 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "type":
+10-30-2023 15:19:34.414 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "WinPrintMon".
+10-30-2023 15:19:34.524 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "baseline":
+10-30-2023 15:19:34.524 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "baseline_interval":
+10-30-2023 15:19:34.524 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "hive":
+10-30-2023 15:19:34.524 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.524 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "proc":
+10-30-2023 15:19:34.524 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "type":
+10-30-2023 15:19:34.524 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "WinRegMon".
+10-30-2023 15:19:34.634 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "baseline":
+10-30-2023 15:19:34.634 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "monitorSubtree":
+10-30-2023 15:19:34.634 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.634 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "printSchema":
+10-30-2023 15:19:34.634 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "startingNode":
+10-30-2023 15:19:34.634 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "targetDc":
+10-30-2023 15:19:34.634 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "admon".
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "counters":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "formatString":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "instances":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "interval":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "mode":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "nonmetric_counters":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "object":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "samplingInterval":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "showZeroValue":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "stats":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "useEnglishOnly":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "usePDHFmtNoCap100":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "useWinApiProcStats":
+10-30-2023 15:19:34.758 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "perfmon".
+10-30-2023 15:19:34.868 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.868 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "schedule":
+10-30-2023 15:19:34.868 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "script":
+10-30-2023 15:19:34.868 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "powershell".
+10-30-2023 15:19:34.978 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:19:34.978 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "schedule":
+10-30-2023 15:19:34.978 +0900 INFO  ModularInputs [1508 MainThread] - Endpoint argument settings for "script":
+10-30-2023 15:19:34.978 +0900 INFO  ModularInputs [1508 MainThread] - Introspection setup completed for scheme "powershell2".
+10-30-2023 15:19:34.978 +0900 INFO  DisasterRecoveryManager [1508 MainThread] - Initialized DisasterRecoveryManager, replication_enabled=0, replication_max_wait_time_secs=0, replication_min_check_time_secs=10, replication_max_check_time_secs=60
+10-30-2023 15:19:34.978 +0900 INFO  CacheManager [1508 MainThread] - cachemanager is using cache eviction algorithm=lru
+10-30-2023 15:19:34.978 +0900 INFO  CacheManager [5476 SavePendingUploadsToDiskThread] - Starting SavePendingUploadsToDiskThread
+10-30-2023 15:19:34.978 +0900 INFO  DS_DC_Common [1508 MainThread] - Initializing the PubSub system.
+10-30-2023 15:19:34.978 +0900 INFO  DS_DC_Common [1508 MainThread] - Initializing core facilities of PubSub system.
+10-30-2023 15:19:35.009 +0900 INFO  DC:DeploymentClient [1508 MainThread] - target-broker clause is missing.
+10-30-2023 15:19:35.009 +0900 WARN  DC:DeploymentClient [1508 MainThread] - DeploymentClient explicitly disabled through config.
+10-30-2023 15:19:35.009 +0900 INFO  DS_DC_Common [1508 MainThread] - Deployment Client not initialized.
+10-30-2023 15:19:35.009 +0900 INFO  DS_DC_Common [1508 MainThread] - Deployment Server not available on a dedicated forwarder.
+10-30-2023 15:19:35.009 +0900 INFO  ClusteringMgr [1508 MainThread] - initing clustering with: ht=60.000 rf=3 sf=2 cm_ct=18446744073709551.615 ct=60.000 st=60.000 rt=60.000 rct=5.000 rst=5.000 rrt=10.000 rmst=600.000 rmrt=600.000 icps=25 sfrt=600.000 pe=1 im=0 ip=0 mob=5 mor=5 mosr=5 pb=5 rep_port= pptr=10 pptrl=100 fznb=10 Empty/Default cluster pass4symmkey=false allow Empty/Default cluster pass4symmkey=false rrt=restart dft=180 abt=600 sbs=1
+10-30-2023 15:19:35.009 +0900 INFO  ClusteringMgr [1508 MainThread] - clustering disabled
+10-30-2023 15:19:35.009 +0900 WARN  HTTPAuthManager [1508 MainThread] - pass4SymmKey length is too short. See pass4SymmKey_minLength under the general stanza in server.conf.
+10-30-2023 15:19:35.009 +0900 WARN  SHCConfig [1508 MainThread] - Default pass4symkey is being used. Please change to a random one.
+10-30-2023 15:19:35.009 +0900 INFO  SHClusterMgr [1508 MainThread] - initing shpooling with: ht=60.000 rf=3 ct=60.000 st=60.000 rt=60.000 rct=5.000 rst=5.000 rrt=10.000 rmst=600.000 rmrt=600.000 pe=1 im=0 is=0 mor=5 pb=5 rep_port= pptr=10
+10-30-2023 15:19:35.009 +0900 INFO  SHClusterMgr [1508 MainThread] - shpooling disabled
+10-30-2023 15:19:35.009 +0900 INFO  WorkloadManager [1508 MainThread] - Workload management cannot be enabled on this system because the feature is not supported. Check the status of workload management preflight checks for additional information.
+10-30-2023 15:19:35.025 +0900 INFO  loader [1508 MainThread] - Service startup, checkpoint 'REST handler'
+10-30-2023 15:19:35.025 +0900 INFO  loader [1508 MainThread] - Service startup, running
+10-30-2023 15:19:35.025 +0900 INFO  loader [1508 MainThread] - win-service: Windows service is now in running state.
+10-30-2023 15:19:35.025 +0900 INFO  loader [1508 MainThread] - remote ui state feature is disabled
+10-30-2023 15:19:35.025 +0900 INFO  CollectionCacheManager [6656 CollectionCacheBookkeepingThread] - CollectionCacheBookkeepingThread starting eloop
+10-30-2023 15:19:35.134 +0900 INFO  IndexerInit [13648 SplunkdSpecificInitThread] - running splunkd specific init
+10-30-2023 15:19:35.134 +0900 WARN  SearchLogCopier [7340 DispatchReaper] - Config setting enabled is invalid. Feature is disabled.
+10-30-2023 15:19:35.134 +0900 INFO  IntrospectionGenerator:disk_objects [13648 SplunkdSpecificInitThread] - Enabled: disk_objects=false indexes=false volumes=false dispatch=false fishbucket=true partitions=false summaries=false distributedIndexes=false
+10-30-2023 15:19:35.134 +0900 INFO  IntrospectionGenerator:disk_objects [13648 SplunkdSpecificInitThread] - I-data gathering (Disk Objects) starting; period=600.000s
+10-30-2023 15:19:35.134 +0900 INFO  loader [1508 MainThread] - Initializing from configuration
+10-30-2023 15:19:35.134 +0900 INFO  ChunkedLBProcessor [15084 parsing] - Initializing the chunked line breaking processor
+10-30-2023 15:19:35.134 +0900 INFO  TcpOutputProc [15084 parsing] - Initializing with fwdtype=lwf
+10-30-2023 15:19:35.134 +0900 INFO  TcpOutputProc [15084 parsing] - found Whitelist forwardedindex.0.whitelist , RE : .*
+10-30-2023 15:19:35.134 +0900 INFO  TcpOutputProc [15084 parsing] - found Blacklist forwardedindex.1.blacklist , RE : _.*
+10-30-2023 15:19:35.134 +0900 INFO  TcpOutputProc [15084 parsing] - found Whitelist forwardedindex.2.whitelist , RE : (_audit|_introspection|_internal|_telemetry|_configtracker)
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline merging disabled in default-mode.conf file
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline typing disabled in default-mode.conf file
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline ruleset disabled in default-mode.conf file
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline tee disabled in default-mode.conf file
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline vix disabled in default-mode.conf file
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline remotequeuetyping disabled in default-mode.conf file
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline remotequeueruleset disabled in default-mode.conf file
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline remotequeueoutput disabled in default-mode.conf file
+10-30-2023 15:19:35.150 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline rfsoutput disabled in default-mode.conf file
+10-30-2023 15:19:35.181 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline remotequeueinput disabled in default-mode.conf file
+10-30-2023 15:19:35.181 +0900 INFO  TcpInputProc [15288 tcp] - Registering metrics callback for: tcpin_connections
+10-30-2023 15:19:35.197 +0900 WARN  SSLOptions [16172 TcpListener] - inputs.conf/[SSL]/certLogRepeatFrequency: invalid value from system
+10-30-2023 15:19:35.197 +0900 INFO  ModularInputs [2708 ExecProcessor] - No stanzas found for scheme "MonitorNoHandle" in inputs.conf at script (re)start.
+10-30-2023 15:19:35.197 +0900 INFO  ModularInputs [2708 ExecProcessor] - No stanzas found for scheme "WinNetMon" in inputs.conf at script (re)start.
+10-30-2023 15:19:35.197 +0900 INFO  ModularInputs [2708 ExecProcessor] - No stanzas found for scheme "WinPrintMon" in inputs.conf at script (re)start.
+10-30-2023 15:19:35.197 +0900 INFO  ExecProcessor [2708 ExecProcessor] - Ignoring parameter "interval" for modular input "WinPrintMon" when scheduling the runtime for script=""C:\Program Files\SplunkUniversalForwarder\bin\scripts\splunk-winprintmon.path"". This means potentially Splunk won't be restarting it in case it gets terminated.
+10-30-2023 15:19:35.197 +0900 INFO  ModularInputs [2708 ExecProcessor] - No stanzas found for scheme "WinRegMon" in inputs.conf at script (re)start.
+10-30-2023 15:19:35.197 +0900 INFO  ModularInputs [2708 ExecProcessor] - No stanzas found for scheme "admon" in inputs.conf at script (re)start.
+10-30-2023 15:19:35.197 +0900 INFO  ExecProcessor [2708 ExecProcessor] - Ignoring parameter "interval" for modular input "perfmon" when scheduling the runtime for script=""C:\Program Files\SplunkUniversalForwarder\bin\scripts\splunk-perfmon.path"". This means potentially Splunk won't be restarting it in case it gets terminated.
+10-30-2023 15:19:35.197 +0900 INFO  ModularInputs [2708 ExecProcessor] - No stanzas found for scheme "powershell" in inputs.conf at script (re)start.
+10-30-2023 15:19:35.197 +0900 INFO  ModularInputs [2708 ExecProcessor] - No stanzas found for scheme "powershell2" in inputs.conf at script (re)start.
+10-30-2023 15:19:35.197 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-wmi.exe"
+10-30-2023 15:19:35.197 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: 10000000000 ms
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe"
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-admon.exe"
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-netmon.exe"
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-perfmon.exe"
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: run once
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe"
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe" --ps2
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-regmon.exe"
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-winevtlog.exe"
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-winprintmon.exe"
+10-30-2023 15:19:35.212 +0900 INFO  ExecProcessor [2708 ExecProcessor] - 	interval: run once
+10-30-2023 15:19:35.337 +0900 INFO  PipelineComponent [1508 MainThread] - Launching the pipelines for set 0.
+10-30-2023 15:19:35.337 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline set weights calculation timeout period has been set to value=30.000 seconds.
+10-30-2023 15:19:35.337 +0900 INFO  PipelineComponent [1508 MainThread] - Pipeline set number of tracking periods has been set to value=5.
+10-30-2023 15:19:35.384 +0900 INFO  ConfigWatcher [8652 HTTPDispatch] - Loaded configtracker settings with disabled=0 mode=auto log_throttling_disabled=1 log_throttling_threshold_ms=10.000 denylist= exclude_fields=
+10-30-2023 15:19:35.384 +0900 INFO  TailReader [10408 tailreader0] - Registering metrics callback for: tailreader0
+10-30-2023 15:19:35.384 +0900 INFO  TailReader [10408 tailreader0] - Starting tailreader0 thread
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - TailWatcher initializing...
+10-30-2023 15:19:35.384 +0900 INFO  TailReader [10408 tailreader0] - tailreader0 waiting to be un-paused
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\run\splunk\search_telemetry\*search_telemetry.json.
+10-30-2023 15:19:35.384 +0900 INFO  TailReader [6876 batchreader0] - Registering metrics callback for: batchreader0
+10-30-2023 15:19:35.384 +0900 INFO  TailReader [6876 batchreader0] - Starting batchreader0 thread
+10-30-2023 15:19:35.384 +0900 INFO  TailReader [6876 batchreader0] - batchreader0 waiting to be un-paused
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\spool\splunk.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\spool\splunk\...stash_hec.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\spool\splunk\...stash_new.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\spool\splunk\tracker.log*.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\etc\splunk.version.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\configuration_change.log.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\license_usage_summary.log.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\metrics.log.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\splunk_instrumentation_cloud.log*.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\splunkd.log.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\watchdog\watchdog.log*.
+10-30-2023 15:19:35.384 +0900 INFO  TailReader [15212 MainTailingThread] - State transitioning from 1 to 0 (initOrResume).
+10-30-2023 15:19:35.384 +0900 INFO  TailReader [15212 MainTailingThread] - State transitioning from 1 to 0 (initOrResume).
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\etc\splunk.version.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\var\log\splunk.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\var\log\watchdog.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\var\run\splunk\search_telemetry.
+10-30-2023 15:19:35.384 +0900 INFO  TailingProcessor [15212 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\var\spool\splunk.
+10-30-2023 15:19:35.400 +0900 INFO  TcpOutputProc [15084 parsing] - _isHttpOutConfigured=NOT_CONFIGURED
+10-30-2023 15:19:35.400 +0900 ERROR TcpOutputProc [15084 parsing] - LightWeightForwarder/UniversalForwarder not configured. Please configure outputs.conf.
+10-30-2023 15:19:35.431 +0900 INFO  ConfigWatcher [12788 SplunkConfigChangeWatcherThread] - SplunkConfigChangeWatcher initializing...
+10-30-2023 15:19:35.431 +0900 INFO  ConfigWatcher [12788 SplunkConfigChangeWatcherThread] - Watching path: C:\Program Files\SplunkUniversalForwarder\etc\system\local, C:\Program Files\SplunkUniversalForwarder\etc\system\default, C:\Program Files\SplunkUniversalForwarder\etc\apps, C:\Program Files\SplunkUniversalForwarder\etc\users, C:\Program Files\SplunkUniversalForwarder\etc\peer-apps, C:\Program Files\SplunkUniversalForwarder\etc\instance.cfg
+10-30-2023 15:19:35.431 +0900 INFO  ConfigWatcher [12788 SplunkConfigChangeWatcherThread] - Finding the deleted watched configuration files (while splunkd was down) completed in duration=0 secs
+10-30-2023 15:19:35.431 +0900 INFO  loader [8652 HTTPDispatch] - Limiting REST HTTP server to 3333 sockets
+10-30-2023 15:19:35.431 +0900 INFO  loader [8652 HTTPDispatch] - Limiting REST HTTP server to 2730 threads
+10-30-2023 15:19:35.431 +0900 WARN  X509Verify [8652 HTTPDispatch] - X509 certificate (O=SplunkUser,CN=SplunkServerDefaultCert) should not be used, as it is issued by Splunk's own default Certificate Authority (CA). This puts your Splunk instance at very high-risk of the MITM attack. Either commercial-CA-signed or self-CA-signed certificates must be used; see: <http://docs.splunk.com/Documentation/Splunk/latest/Security/Howtoself-signcertificates>
+10-30-2023 15:19:35.478 +0900 INFO  UiHttpListener [15520 WebuiStartup] - Web UI disabled in web.conf [settings]; not starting
+10-30-2023 15:19:41.427 +0900 WARN  TailReader [10408 tailreader0] - Could not send data to output queue (parsingQueue), retrying...
+10-30-2023 15:20:05.137 +0900 WARN  DispatchReaper [7340 DispatchReaper] - Received shutdown signal during startup reaping and did not complete all reaping tasks. Reaping will be performed upon next startup.
+10-30-2023 15:20:05.137 +0900 INFO  FileAndDirectoryEliminator [7340 DispatchReaper] - Enabled
+10-30-2023 15:30:20.484 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop pending
+10-30-2023 15:30:20.486 +0900 INFO  loader [8652 HTTPDispatch] - Shutdown HTTPDispatchThread
+10-30-2023 15:30:20.486 +0900 INFO  Shutdown [1436 Shutdown] - Shutting down splunkd
+10-30-2023 15:30:20.486 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_Begin"
+10-30-2023 15:30:20.486 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="DiagDownloadThread"
+10-30-2023 15:30:20.488 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="DistributedRestCaller"
+10-30-2023 15:30:20.488 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="DistHealthReporter"
+10-30-2023 15:30:20.489 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="TelemetryMetricBuffer"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_NoahHealthReport"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_FileIntegrityChecker"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_JustBeforeKVStore"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_KVStore"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="CollectionCacheManager"
+10-30-2023 15:30:20.491 +0900 INFO  CollectionCacheManager [6656 CollectionCacheBookkeepingThread] - CollectionCacheBookkeepingThread finished eloop
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_DFM"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_Thruput"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="ThruputProcessor"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_FederatedHeartBeat"
+10-30-2023 15:30:20.491 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="FederatedHeartBeat"
+10-30-2023 15:30:20.492 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_TcpInput1"
+10-30-2023 15:30:20.492 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="FwdConnectionShutdownHandler1"
+10-30-2023 15:30:20.492 +0900 INFO  TcpInputProc [1436 Shutdown] - Done setting shutdown in progress signal.
+10-30-2023 15:30:20.492 +0900 INFO  TcpInputProc [16172 TcpListener] - Shutting down listening ports
+10-30-2023 15:30:20.492 +0900 INFO  TcpInputProc [1436 Shutdown] - Setting up input quiesce timeout for : 15.000 secs
+10-30-2023 15:30:20.608 +0900 INFO  TcpInputProc [16172 TcpListener] - Cleaning up TCP connections
+10-30-2023 15:30:20.608 +0900 INFO  TcpInputProc [16172 TcpListener] - Shutting down existing connections.
+10-30-2023 15:30:21.215 +0900 INFO  Shutdown [1436 Shutdown] - shutting down level="ShutdownLevel_ExecSendInitialSigterm"
+10-30-2023 15:30:21.215 +0900 INFO  Shutdown [1436 Shutdown] - shutting down name="ExecProcessor_SendInitialSigterm"
+10-30-2023 15:30:21.494 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:22.499 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:23.507 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:24.510 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:25.513 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:25.623 +0900 INFO  TcpInputProc [16172 TcpListener] - TCP connection cleanup complete
+10-30-2023 15:30:26.514 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:27.515 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:28.516 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:29.535 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:30.544 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:31.557 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:32.561 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:33.563 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:34.578 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:35.580 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:36.581 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:37.587 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:38.588 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:39.597 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:40.606 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:41.617 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:42.622 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:43.633 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:44.646 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:45.648 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:46.648 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:47.658 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:48.670 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:49.682 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:50.694 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:51.705 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:52.713 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:53.724 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:54.729 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:55.730 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:56.731 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:57.732 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:58.737 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:30:59.739 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:00.748 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:01.759 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:02.762 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:03.769 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:04.784 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:05.785 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:06.786 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:07.787 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:08.789 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:09.791 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:10.798 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:11.808 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:12.823 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:13.830 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:14.832 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:15.832 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:16.833 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:17.835 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:18.835 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:19.836 +0900 INFO  loader [13956 Unknown Thread] - Service shutdown, stop checkpoint
+10-30-2023 15:31:25.464 +0900 INFO  loader [0 MainThread] - win-service: Starting as a Windows service: will run various system checks first...
+10-30-2023 15:31:25.464 +0900 INFO  loader [0 MainThread] - win-service: Splunk starting as a non-administrator
+10-30-2023 15:31:25.464 +0900 INFO  loader [0 MainThread] - Automatic migration of modular inputs
+10-30-2023 15:31:25.511 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'pre-flight check'
+10-30-2023 15:31:28.454 +0900 INFO  loader [0 MainThread] - win-service: Command pre-flight-checks ran successfully.
+10-30-2023 15:31:28.454 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'validating XML'
+10-30-2023 15:31:28.500 +0900 INFO  loader [0 MainThread] - win-service: Command check-xml-files ran successfully.
+10-30-2023 15:31:28.500 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'starting server'
+10-30-2023 15:31:28.516 +0900 INFO  ServerConfig [0 MainThread] - My GUID is 8A424A06-B353-4CF7-80CD-BF8314BB2A51
+10-30-2023 15:31:28.516 +0900 INFO  ServerConfig [0 MainThread] - My server name is "QW-WWW-A-001".
+10-30-2023 15:31:28.516 +0900 INFO  ServerConfig [0 MainThread] - Found no site defined in server.conf
+10-30-2023 15:31:28.516 +0900 INFO  ServerConfig [0 MainThread] - Found no hostname options in server.conf. Will attempt to use default for now.
+10-30-2023 15:31:28.516 +0900 INFO  ServerConfig [0 MainThread] - Host name option is "".
+10-30-2023 15:31:28.516 +0900 INFO  ServerConfig [0 MainThread] - My hostname is "QW-WWW-A-001".
+10-30-2023 15:31:28.516 +0900 WARN  SSLOptions [0 MainThread] - server.conf/[sslConfig]/sslVerifyServerCert is false disabling certificate validation; must be set to "true" for increased security
+10-30-2023 15:31:28.532 +0900 INFO  ServerConfig [0 MainThread] - SSL session cache path  enabled 0 session timeout on SSL server 300.000
+10-30-2023 15:31:28.532 +0900 INFO  ServerConfig [0 MainThread] - Setting HTTP server compression state=on
+10-30-2023 15:31:28.532 +0900 INFO  ServerConfig [0 MainThread] - Setting HTTP client compression state=1 (true)
+10-30-2023 15:31:28.532 +0900 INFO  ServerConfig [0 MainThread] - disableSSLShutdown=0
+10-30-2023 15:31:28.532 +0900 INFO  ServerConfig [0 MainThread] - Setting search process to have long life span: enable_search_process_long_lifespan=1
+10-30-2023 15:31:28.532 +0900 INFO  ServerConfig [0 MainThread] - certificateStatusValidationMethod is not set, defaulting to none.
+10-30-2023 15:31:28.532 +0900 INFO  ServerConfig [0 MainThread] - Splunk is starting with EC-SSC disabled
+10-30-2023 15:31:28.532 +0900 INFO  loader [0 MainThread] - Management port is available for UDS connections
+10-30-2023 15:31:28.532 +0900 INFO  loader [0 MainThread] - Regex JIT enabled
+10-30-2023 15:31:28.532 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'audit subsystem'
+10-30-2023 15:31:28.532 +0900 INFO  loader [0 MainThread] - Service startup, checkpoint 'main subsystem'
+10-30-2023 15:31:28.547 +0900 INFO  loader [11612 MainThread] - Service startup, checkpoint 'ingestion pipelines'
+10-30-2023 15:31:28.547 +0900 INFO  ServerRoles [11612 MainThread] - Declared role=universal_forwarder.
+10-30-2023 15:31:28.547 +0900 INFO  BundlesSetup [11612 MainThread] - Setup stats for C:\Program Files\SplunkUniversalForwarder\etc: wallclock_elapsed_msec=32, cpu_time_used=0.03125, shared_services_generation=1, shared_services_population=1
+10-30-2023 15:31:28.547 +0900 INFO  loader [11612 MainThread] - Splunkd starting (build 64e843ea36b1).
+10-30-2023 15:31:28.547 +0900 INFO  loader [11612 MainThread] - System info: Windows, QW-WWW-A-001, 0, 10, x64.
+10-30-2023 15:31:28.547 +0900 INFO  loader [11612 MainThread] - Detected 8 (virtual) CPUs, 4 CPU cores, and 16383MB RAM
+10-30-2023 15:31:28.547 +0900 INFO  loader [11612 MainThread] - Maximum number of threads (approximate): 8191
+10-30-2023 15:31:28.547 +0900 INFO  loader [11612 MainThread] - Getting configuration data from: C:\Program Files\SplunkUniversalForwarder\etc\myinstall\splunkd.xml
+10-30-2023 15:31:28.547 +0900 INFO  loader [11612 MainThread] - SPLUNK_MODULE_PATH environment variable not found - defaulting to C:\Program Files\SplunkUniversalForwarder\etc\modules
+10-30-2023 15:31:28.547 +0900 INFO  loader [11612 MainThread] - loading modules from C:\Program Files\SplunkUniversalForwarder\etc\modules
+10-30-2023 15:31:28.563 +0900 INFO  loader [11612 MainThread] - Writing out composite configuration file: C:\Program Files\SplunkUniversalForwarder\var\run\splunk\composite.xml
+10-30-2023 15:31:28.563 +0900 INFO  PipelineComponent [11612 MainThread] - Ingestion pipeline sets have been configured to use pipeline set policy=round_robin for multiple pipeline sets.
+10-30-2023 15:31:28.563 +0900 INFO  loader [11612 MainThread] - Service startup, checkpoint 'distributed deployment'
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - Initializing CleMgr...
+10-30-2023 15:31:28.563 +0900 INFO  LicenseMgr [11612 MainThread] - Initing LicenseMgr
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - serverName=QW-WWW-A-001 guid=8A424A06-B353-4CF7-80CD-BF8314BB2A51
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - connection_timeout=30
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - send_timeout=30
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - receive_timeout=30
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - key=license_warnings_update_interval not found in licenser stanza of server.conf, defaulting=0
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - squash_threshold=2000
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - strict_pool_quota=1
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - key=pool_suggestion not found in licenser stanza of server.conf, defaulting=''
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - key=test_aws_metering not found in licenser stanza of server.conf, defaulting=0
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - key=test_aws_product_code not found in licenser stanza of server.conf, defaulting=0
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - lm_ping_interval=86400
+10-30-2023 15:31:28.563 +0900 INFO  LMConfig [11612 MainThread] - key=lm_uri not found in licenser stanza of server.conf, defaulting to empty array
+10-30-2023 15:31:28.563 +0900 INFO  LicenseMgr [11612 MainThread] - Initing LicenseMgr runContext_splunkd=true
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - closing stack mgr
+10-30-2023 15:31:28.563 +0900 INFO  LMSlaveInfo [11612 MainThread] - all slaves cleared
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - Initalized license_warnings_update_interval=auto
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - License Manager supports Conditional Licensing Enforcement. For baked in CLE policies, window_period=60 days, max_violations=45, for stack size below 107374182400 bytes
+10-30-2023 15:31:28.563 +0900 INFO  LMLicense [11612 MainThread] - Applying default enforcement policy for free
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - Added policy WinSz=30 Warnings=3 MaxSize=0 isDefault=1 features= for free
+10-30-2023 15:31:28.563 +0900 INFO  LMLicense [11612 MainThread] - Applying default enforcement policy for forwarder
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - Added policy WinSz=30 Warnings=5 MaxSize=0 isDefault=1 features= for forwarder
+10-30-2023 15:31:28.563 +0900 INFO  LMStack [11612 MainThread] - Added type=forwarder license, from file=splunkforwarder.lic, to stack=forwarder of group=Forwarder
+10-30-2023 15:31:28.563 +0900 INFO  LMLicense [11612 MainThread] - Applying default enforcement policy for forwarder
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - created stack='forwarder'
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - Replaced with latest policy WinSz=30 Warnings=7 MaxSize=0 isDefault=1 features= for forwarder
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - added pool auto_generated_pool_forwarder to stack forwarder
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - added pool auto_generated_pool_free to stack free
+10-30-2023 15:31:28.563 +0900 INFO  ServerRoles [11612 MainThread] - Declared role=license_master.
+10-30-2023 15:31:28.563 +0900 INFO  ServerRoles [11612 MainThread] - Declared role=license_manager.
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - Initialized hideQuotaWarning = "0"
+10-30-2023 15:31:28.563 +0900 INFO  LMStackMgr [11612 MainThread] - init completed [8A424A06-B353-4CF7-80CD-BF8314BB2A51,Forwarder,runContext_splunkd=true]
+10-30-2023 15:31:28.563 +0900 INFO  LicenseMgr [11612 MainThread] - StackMgr init complete...
+10-30-2023 15:31:28.563 +0900 INFO  LMTracker [11612 MainThread] - Setting default product type='enterprise'
+10-30-2023 15:31:28.563 +0900 INFO  LMTracker [11612 MainThread] - init'ing slaveId=8A424A06-B353-4CF7-80CD-BF8314BB2A51 label=QW-WWW-A-001 [30,30,self]
+10-30-2023 15:31:28.579 +0900 INFO  LMTracker [11612 MainThread] - enabling implicit feature set
+10-30-2023 15:31:28.579 +0900 INFO  LMTracker [11612 MainThread] - attempting to ping master=self from slave=8A424A06-B353-4CF7-80CD-BF8314BB2A51
+10-30-2023 15:31:28.579 +0900 INFO  LMSlaveInfo [11612 MainThread] - new slave='8A424A06-B353-4CF7-80CD-BF8314BB2A51' created
+10-30-2023 15:31:28.579 +0900 INFO  LMTracker [11612 MainThread] - setting masterGuid='8A424A06-B353-4CF7-80CD-BF8314BB2A51'
+10-30-2023 15:31:28.579 +0900 INFO  LMTracker [11612 MainThread] - attempting to contact master=self from slave=8A424A06-B353-4CF7-80CD-BF8314BB2A51 success
+10-30-2023 15:31:28.579 +0900 INFO  LicenseMgr [11612 MainThread] - Tracker init complete...
+10-30-2023 15:31:28.579 +0900 INFO  loader [11612 MainThread] - Setting SSL configuration.
+10-30-2023 15:31:28.579 +0900 INFO  loader [11612 MainThread] - Server supporting SSL versions TLS1.2
+10-30-2023 15:31:28.579 +0900 INFO  loader [11612 MainThread] - Using cipher suite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDH-ECDSA-AES256-GCM-SHA384:ECDH-ECDSA-AES128-GCM-SHA256:ECDH-ECDSA-AES128-SHA256:AES256-GCM-SHA384:AES128-GCM-SHA256:AES128-SHA256
+10-30-2023 15:31:28.579 +0900 INFO  loader [11612 MainThread] - Using ECDH curves : prime256v1, secp384r1, secp521r1
+10-30-2023 15:31:28.783 +0900 WARN  UserManagerPro [11612 MainThread] - Can't find [distributedSearch] stanza in distsearch.conf, using default authtoken HTTP timeouts
+10-30-2023 15:31:28.830 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.830 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.830 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.830 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.830 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.830 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="MonitorNoHandle://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="disabled, index"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="WinEventLog://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="start_from, use_old_eventlog_api, use_threads, thread_wait_time_msec, suppress_checkpoint, suppress_sourcename, suppress_keywords, suppress_type, suppress_task, suppress_opcode, current_only, batch_size, checkpointInterval, checkpointSync, channel_wait_time, disabled, evt_resolve_ad_obj, evt_skip_GUID_resolution, evt_dc_name, evt_dns_name, evt_resolve_ad_ds, evt_ad_cache_disabled, evt_ad_cache_exp, evt_ad_cache_exp_neg, evt_ad_cache_max_entries, evt_exclude_fields, evt_sid_cache_disabled, evt_sid_cache_exp, evt_sid_cache_exp_neg, evt_sid_cache_max_entries, wec_event_format, index, whitelist, blacklist, whitelist1, whitelist2, whitelist3, whitelist4, whitelist5, whitelist6, whitelist7, whitelist8, whitelist9, blacklist1, blacklist2, blacklist3, blacklist4, blacklist5, blacklist6, blacklist7, blacklist8, blacklist9, key, suppress_text, renderXml"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="WinHostMon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="type, interval, disabled, index"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="WinNetMon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="remoteAddress, process, user, addressFamily, packetType, direction, protocol, readInterval, driverBufferSize, userBufferSize, mode, multikvMaxEventCount, multikvMaxTimeMs, sid_cache_disabled, sid_cache_exp, sid_cache_exp_neg, sid_cache_max_entries, disabled, index"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="WinPrintMon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="type, interval, baseline, disabled, index"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="WinRegMon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="proc, hive, type, baseline, baseline_interval, disabled, index"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="admon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="targetDc, startingNode, monitorSubtree, disabled, index, printSchema, baseline"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="journald://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="journalctl-include-fields, journalctl-exclude-fields, journalctl-filter, journalctl-unit, journalctl-identifier, journalctl-priority, journalctl-boot, journalctl-facility, journalctl-grep, journalctl-user-unit, journalctl-dmesg, journalctl-quiet, journalctl-freetext"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="logd://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="logd-backtrace, logd-debug, logd-info, logd-loss, logd-signpost, logd-predicate, logd-process, logd-source, logd-include-fields, logd-exclude-fields, logd-interval, logd-starttime, logd-freetext"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="perfmon://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="object, counters, nonmetric_counters, instances, interval, mode, samplingInterval, stats, disabled, showZeroValue, useEnglishOnly, useWinApiProcStats, formatString, usePDHFmtNoCap100"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="powershell2://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="script, schedule"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="powershell://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="script, schedule"
+10-30-2023 15:31:28.877 +0900 INFO  BundlesUtil [11612 MainThread] - Using manager-apps over master-apps, using: C:\Program Files\SplunkUniversalForwarder\etc\manager-apps
+10-30-2023 15:31:28.877 +0900 INFO  SpecFiles [11612 MainThread] - Found external scheme definition for stanza="splunktcptoken://" from spec file="C:\Program Files\SplunkUniversalForwarder\etc\system\README\inputs.conf.spec" with parameters="token"
+10-30-2023 15:31:29.002 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:29.002 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "MonitorNoHandle".
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "batch_size":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist1":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist2":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist3":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist4":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist5":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist6":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist7":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist8":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "blacklist9":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "checkpointInterval":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "checkpointSync":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "current_only":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_ad_cache_disabled":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_ad_cache_exp":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_ad_cache_exp_neg":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_ad_cache_max_entries":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_dc_name":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_dns_name":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_exclude_fields":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_resolve_ad_ds":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_resolve_ad_obj":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_sid_cache_disabled":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_sid_cache_exp":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_sid_cache_exp_neg":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_sid_cache_max_entries":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "evt_skip_GUID_resolution":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "renderXml":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "start_from":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "suppress_checkpoint":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "suppress_keywords":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "suppress_opcode":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "suppress_sourcename":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "suppress_task":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "suppress_text":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "suppress_type":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "thread_wait_time_msec":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "use_old_eventlog_api":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "use_threads":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "wec_event_format":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist1":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist2":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist3":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist4":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist5":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist6":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist7":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist8":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "whitelist9":
+10-30-2023 15:31:29.362 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "WinEventLog".
+10-30-2023 15:31:29.487 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:29.487 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "type":
+10-30-2023 15:31:29.487 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "WinHostMon".
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "addressFamily":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "direction":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "driverBufferSize":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "mode":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "multikvMaxEventCount":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "multikvMaxTimeMs":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "packetType":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "process":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "protocol":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "readInterval":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "remoteAddress":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "sid_cache_disabled":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "sid_cache_exp":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "sid_cache_exp_neg":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "sid_cache_max_entries":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "user":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "userBufferSize":
+10-30-2023 15:31:29.628 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "WinNetMon".
+10-30-2023 15:31:29.754 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "baseline":
+10-30-2023 15:31:29.754 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "interval":
+10-30-2023 15:31:29.754 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:29.754 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "type":
+10-30-2023 15:31:29.754 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "WinPrintMon".
+10-30-2023 15:31:29.864 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "baseline":
+10-30-2023 15:31:29.864 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "baseline_interval":
+10-30-2023 15:31:29.864 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "hive":
+10-30-2023 15:31:29.864 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:29.864 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "proc":
+10-30-2023 15:31:29.864 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "type":
+10-30-2023 15:31:29.864 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "WinRegMon".
+10-30-2023 15:31:29.994 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "baseline":
+10-30-2023 15:31:29.994 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "monitorSubtree":
+10-30-2023 15:31:29.994 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:29.995 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "printSchema":
+10-30-2023 15:31:29.995 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "startingNode":
+10-30-2023 15:31:29.995 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "targetDc":
+10-30-2023 15:31:29.995 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "admon".
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "counters":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "formatString":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "instances":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "interval":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "mode":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "nonmetric_counters":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "object":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "samplingInterval":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "showZeroValue":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "stats":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "useEnglishOnly":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "usePDHFmtNoCap100":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "useWinApiProcStats":
+10-30-2023 15:31:30.119 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "perfmon".
+10-30-2023 15:31:30.244 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:30.244 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "schedule":
+10-30-2023 15:31:30.244 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "script":
+10-30-2023 15:31:30.244 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "powershell".
+10-30-2023 15:31:30.368 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "name":
+10-30-2023 15:31:30.368 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "schedule":
+10-30-2023 15:31:30.368 +0900 INFO  ModularInputs [11612 MainThread] - Endpoint argument settings for "script":
+10-30-2023 15:31:30.368 +0900 INFO  ModularInputs [11612 MainThread] - Introspection setup completed for scheme "powershell2".
+10-30-2023 15:31:30.374 +0900 INFO  DisasterRecoveryManager [11612 MainThread] - Initialized DisasterRecoveryManager, replication_enabled=0, replication_max_wait_time_secs=0, replication_min_check_time_secs=10, replication_max_check_time_secs=60
+10-30-2023 15:31:30.374 +0900 INFO  CacheManager [11612 MainThread] - cachemanager is using cache eviction algorithm=lru
+10-30-2023 15:31:30.375 +0900 INFO  CacheManager [14224 SavePendingUploadsToDiskThread] - Starting SavePendingUploadsToDiskThread
+10-30-2023 15:31:30.375 +0900 INFO  DS_DC_Common [11612 MainThread] - Initializing the PubSub system.
+10-30-2023 15:31:30.375 +0900 INFO  DS_DC_Common [11612 MainThread] - Initializing core facilities of PubSub system.
+10-30-2023 15:31:30.412 +0900 INFO  DC:DeploymentClient [11612 MainThread] - target-broker clause is missing.
+10-30-2023 15:31:30.413 +0900 WARN  DC:DeploymentClient [11612 MainThread] - DeploymentClient explicitly disabled through config.
+10-30-2023 15:31:30.413 +0900 INFO  DS_DC_Common [11612 MainThread] - Deployment Client not initialized.
+10-30-2023 15:31:30.413 +0900 INFO  DS_DC_Common [11612 MainThread] - Deployment Server not available on a dedicated forwarder.
+10-30-2023 15:31:30.413 +0900 INFO  ClusteringMgr [11612 MainThread] - initing clustering with: ht=60.000 rf=3 sf=2 cm_ct=18446744073709551.615 ct=60.000 st=60.000 rt=60.000 rct=5.000 rst=5.000 rrt=10.000 rmst=600.000 rmrt=600.000 icps=25 sfrt=600.000 pe=1 im=0 ip=0 mob=5 mor=5 mosr=5 pb=5 rep_port= pptr=10 pptrl=100 fznb=10 Empty/Default cluster pass4symmkey=false allow Empty/Default cluster pass4symmkey=false rrt=restart dft=180 abt=600 sbs=1
+10-30-2023 15:31:30.413 +0900 INFO  ClusteringMgr [11612 MainThread] - clustering disabled
+10-30-2023 15:31:30.413 +0900 WARN  HTTPAuthManager [11612 MainThread] - pass4SymmKey length is too short. See pass4SymmKey_minLength under the general stanza in server.conf.
+10-30-2023 15:31:30.413 +0900 WARN  SHCConfig [11612 MainThread] - Default pass4symkey is being used. Please change to a random one.
+10-30-2023 15:31:30.413 +0900 INFO  SHClusterMgr [11612 MainThread] - initing shpooling with: ht=60.000 rf=3 ct=60.000 st=60.000 rt=60.000 rct=5.000 rst=5.000 rrt=10.000 rmst=600.000 rmrt=600.000 pe=1 im=0 is=0 mor=5 pb=5 rep_port= pptr=10
+10-30-2023 15:31:30.413 +0900 INFO  SHClusterMgr [11612 MainThread] - shpooling disabled
+10-30-2023 15:31:30.415 +0900 INFO  WorkloadManager [11612 MainThread] - Workload management cannot be enabled on this system because the feature is not supported. Check the status of workload management preflight checks for additional information.
+10-30-2023 15:31:30.431 +0900 INFO  loader [11612 MainThread] - Service startup, checkpoint 'REST handler'
+10-30-2023 15:31:30.431 +0900 INFO  loader [11612 MainThread] - Service startup, running
+10-30-2023 15:31:30.431 +0900 INFO  loader [11612 MainThread] - win-service: Windows service is now in running state.
+10-30-2023 15:31:30.433 +0900 INFO  loader [11612 MainThread] - remote ui state feature is disabled
+10-30-2023 15:31:30.433 +0900 INFO  CollectionCacheManager [6128 CollectionCacheBookkeepingThread] - CollectionCacheBookkeepingThread starting eloop
+10-30-2023 15:31:30.552 +0900 INFO  IndexerInit [15376 SplunkdSpecificInitThread] - running splunkd specific init
+10-30-2023 15:31:30.552 +0900 WARN  SearchLogCopier [14360 DispatchReaper] - Config setting enabled is invalid. Feature is disabled.
+10-30-2023 15:31:30.555 +0900 INFO  IntrospectionGenerator:disk_objects [15376 SplunkdSpecificInitThread] - Enabled: disk_objects=false indexes=false volumes=false dispatch=false fishbucket=true partitions=false summaries=false distributedIndexes=false
+10-30-2023 15:31:30.555 +0900 INFO  IntrospectionGenerator:disk_objects [15376 SplunkdSpecificInitThread] - I-data gathering (Disk Objects) starting; period=600.000s
+10-30-2023 15:31:30.555 +0900 INFO  loader [11612 MainThread] - Initializing from configuration
+10-30-2023 15:31:30.560 +0900 INFO  ChunkedLBProcessor [8312 parsing] - Initializing the chunked line breaking processor
+10-30-2023 15:31:30.561 +0900 INFO  TcpOutputProc [8312 parsing] - Initializing with fwdtype=lwf
+10-30-2023 15:31:30.562 +0900 INFO  TcpOutputProc [8312 parsing] - found Whitelist forwardedindex.0.whitelist , RE : .*
+10-30-2023 15:31:30.562 +0900 INFO  TcpOutputProc [8312 parsing] - found Blacklist forwardedindex.1.blacklist , RE : _.*
+10-30-2023 15:31:30.562 +0900 INFO  TcpOutputProc [8312 parsing] - found Whitelist forwardedindex.2.whitelist , RE : (_audit|_introspection|_internal|_telemetry|_configtracker)
+10-30-2023 15:31:30.588 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.589 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.591 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.592 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.593 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.594 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.595 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.596 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.597 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.598 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.599 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.601 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.601 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.601 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.604 +0900 INFO  CertificateData [8312 parsing] - channel=Forwarder, subject="CN=forwarders.qoo10.splunkcloud.com", subjectAltName="DNS:forwarders.qoo10.splunkcloud.com", serial=6776B3ADFFEB62862F5649D8D2A162A880B621B6, notValidBefore=1690737429, notValidAfter=1848417459, issuer="/CN=Intermediate CA", sha256-fingerprint=34:7C:48:03:D2:CD:6A:92:00:38:E9:BD:AB:45:5F:78:7D:59:72:F5:23:D1:8C:84:BA:98:E9:28:C9:49:E6:D6
+10-30-2023 15:31:30.604 +0900 INFO  TcpOutputProc [8312 parsing] - tcpout group splunkcloud_20230730_9aaa4b04216cd9a0a4dc1eb274307fd1 using Auto load balanced forwarding
+10-30-2023 15:31:30.604 +0900 INFO  AutoLoadBalancedConnectionStrategy [8312 parsing] - Group splunkcloud_20230730_9aaa4b04216cd9a0a4dc1eb274307fd1 initialized with maxQueueSize=7340032 in bytes.
+10-30-2023 15:31:30.604 +0900 INFO  AutoLoadBalancedConnectionStrategy [8312 parsing] - Group splunkcloud_20230730_9aaa4b04216cd9a0a4dc1eb274307fd1 initialized with autoLBFrequency=120.000
+10-30-2023 15:31:30.604 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline merging disabled in default-mode.conf file
+10-30-2023 15:31:30.604 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline typing disabled in default-mode.conf file
+10-30-2023 15:31:30.604 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline ruleset disabled in default-mode.conf file
+10-30-2023 15:31:30.605 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline tee disabled in default-mode.conf file
+10-30-2023 15:31:30.605 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline vix disabled in default-mode.conf file
+10-30-2023 15:31:30.605 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline remotequeuetyping disabled in default-mode.conf file
+10-30-2023 15:31:30.605 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline remotequeueruleset disabled in default-mode.conf file
+10-30-2023 15:31:30.605 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline remotequeueoutput disabled in default-mode.conf file
+10-30-2023 15:31:30.605 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline rfsoutput disabled in default-mode.conf file
+10-30-2023 15:31:30.631 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline remotequeueinput disabled in default-mode.conf file
+10-30-2023 15:31:30.631 +0900 INFO  TcpInputProc [13792 tcp] - Registering metrics callback for: tcpin_connections
+10-30-2023 15:31:30.631 +0900 WARN  SSLOptions [4780 TcpListener] - inputs.conf/[SSL]/certLogRepeatFrequency: invalid value from system
+10-30-2023 15:31:30.631 +0900 INFO  ModularInputs [5656 ExecProcessor] - No stanzas found for scheme "MonitorNoHandle" in inputs.conf at script (re)start.
+10-30-2023 15:31:30.631 +0900 INFO  ModularInputs [5656 ExecProcessor] - No stanzas found for scheme "WinNetMon" in inputs.conf at script (re)start.
+10-30-2023 15:31:30.647 +0900 INFO  ModularInputs [5656 ExecProcessor] - No stanzas found for scheme "WinPrintMon" in inputs.conf at script (re)start.
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - Ignoring parameter "interval" for modular input "WinPrintMon" when scheduling the runtime for script=""C:\Program Files\SplunkUniversalForwarder\bin\scripts\splunk-winprintmon.path"". This means potentially Splunk won't be restarting it in case it gets terminated.
+10-30-2023 15:31:30.647 +0900 INFO  ModularInputs [5656 ExecProcessor] - No stanzas found for scheme "WinRegMon" in inputs.conf at script (re)start.
+10-30-2023 15:31:30.647 +0900 INFO  ModularInputs [5656 ExecProcessor] - No stanzas found for scheme "admon" in inputs.conf at script (re)start.
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - Ignoring parameter "interval" for modular input "perfmon" when scheduling the runtime for script=""C:\Program Files\SplunkUniversalForwarder\bin\scripts\splunk-perfmon.path"". This means potentially Splunk won't be restarting it in case it gets terminated.
+10-30-2023 15:31:30.647 +0900 INFO  ModularInputs [5656 ExecProcessor] - No stanzas found for scheme "powershell" in inputs.conf at script (re)start.
+10-30-2023 15:31:30.647 +0900 INFO  ModularInputs [5656 ExecProcessor] - No stanzas found for scheme "powershell2" in inputs.conf at script (re)start.
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-wmi.exe" -index idx_qw_a001_iis
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: 10000000000 ms
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-MonitorNoHandle.exe"
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-admon.exe"
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-netmon.exe"
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-perfmon.exe"
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: run once
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe"
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-powershell.exe" --ps2
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-regmon.exe"
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-winevtlog.exe"
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: 60000 ms
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - New scheduled exec process: "C:\Program Files\SplunkUniversalForwarder\bin\splunk-winprintmon.exe"
+10-30-2023 15:31:30.647 +0900 INFO  ExecProcessor [5656 ExecProcessor] - 	interval: run once
+10-30-2023 15:31:30.725 +0900 INFO  PipelineComponent [11612 MainThread] - Launching the pipelines for set 0.
+10-30-2023 15:31:30.725 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline set weights calculation timeout period has been set to value=30.000 seconds.
+10-30-2023 15:31:30.725 +0900 INFO  PipelineComponent [11612 MainThread] - Pipeline set number of tracking periods has been set to value=5.
+10-30-2023 15:31:30.772 +0900 INFO  ConfigWatcher [15448 HTTPDispatch] - Loaded configtracker settings with disabled=0 mode=auto log_throttling_disabled=1 log_throttling_threshold_ms=10.000 denylist= exclude_fields=
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - TailWatcher initializing...
+10-30-2023 15:31:30.772 +0900 INFO  TailReader [6408 tailreader0] - Registering metrics callback for: tailreader0
+10-30-2023 15:31:30.772 +0900 INFO  TailReader [13400 batchreader0] - Registering metrics callback for: batchreader0
+10-30-2023 15:31:30.772 +0900 INFO  TailReader [6408 tailreader0] - Starting tailreader0 thread
+10-30-2023 15:31:30.772 +0900 INFO  TailReader [13400 batchreader0] - Starting batchreader0 thread
+10-30-2023 15:31:30.772 +0900 INFO  TailReader [13400 batchreader0] - batchreader0 waiting to be un-paused
+10-30-2023 15:31:30.772 +0900 INFO  TailReader [6408 tailreader0] - tailreader0 waiting to be un-paused
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\run\splunk\search_telemetry\*search_telemetry.json.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\spool\splunk.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\spool\splunk\...stash_hec.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\spool\splunk\...stash_new.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: batch://$SPLUNK_HOME\var\spool\splunk\tracker.log*.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\etc\splunk.version.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\configuration_change.log.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\license_usage_summary.log.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\metrics.log.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\splunk_instrumentation_cloud.log*.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\splunk\splunkd.log.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Parsing configuration stanza: monitor://$SPLUNK_HOME\var\log\watchdog\watchdog.log*.
+10-30-2023 15:31:30.772 +0900 INFO  TailReader [8060 MainTailingThread] - State transitioning from 1 to 0 (initOrResume).
+10-30-2023 15:31:30.772 +0900 INFO  TailReader [8060 MainTailingThread] - State transitioning from 1 to 0 (initOrResume).
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\etc\splunk.version.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\var\log\splunk.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\var\log\watchdog.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\var\run\splunk\search_telemetry.
+10-30-2023 15:31:30.772 +0900 INFO  TailingProcessor [8060 MainTailingThread] - Adding watch on path: C:\Program Files\SplunkUniversalForwarder\var\spool\splunk.
+10-30-2023 15:31:30.772 +0900 INFO  TcpOutputProc [8312 parsing] - _isHttpOutConfigured=NOT_CONFIGURED
+10-30-2023 15:31:30.788 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\watchdog\watchdog.log'.
+10-30-2023 15:31:30.788 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\wlm_monitor.log'.
+10-30-2023 15:31:30.788 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\splunk_instrumentation_cloud.log'.
+10-30-2023 15:31:30.822 +0900 INFO  ConfigWatcher [8904 SplunkConfigChangeWatcherThread] - SplunkConfigChangeWatcher initializing...
+10-30-2023 15:31:30.824 +0900 INFO  ConfigWatcher [8904 SplunkConfigChangeWatcherThread] - Watching path: C:\Program Files\SplunkUniversalForwarder\etc\system\local, C:\Program Files\SplunkUniversalForwarder\etc\system\default, C:\Program Files\SplunkUniversalForwarder\etc\apps, C:\Program Files\SplunkUniversalForwarder\etc\users, C:\Program Files\SplunkUniversalForwarder\etc\peer-apps, C:\Program Files\SplunkUniversalForwarder\etc\instance.cfg
+10-30-2023 15:31:30.829 +0900 INFO  loader [15448 HTTPDispatch] - Limiting REST HTTP server to 3333 sockets
+10-30-2023 15:31:30.829 +0900 INFO  loader [15448 HTTPDispatch] - Limiting REST HTTP server to 2730 threads
+10-30-2023 15:31:30.829 +0900 WARN  X509Verify [15448 HTTPDispatch] - X509 certificate (O=SplunkUser,CN=SplunkServerDefaultCert) should not be used, as it is issued by Splunk's own default Certificate Authority (CA). This puts your Splunk instance at very high-risk of the MITM attack. Either commercial-CA-signed or self-CA-signed certificates must be used; see: <http://docs.splunk.com/Documentation/Splunk/latest/Security/Howtoself-signcertificates>
+10-30-2023 15:31:30.836 +0900 INFO  ConfigWatcher [8904 SplunkConfigChangeWatcherThread] - Finding the deleted watched configuration files (while splunkd was down) completed in duration=0.015 secs
+10-30-2023 15:31:30.850 +0900 INFO  UiHttpListener [10884 WebuiStartup] - Web UI disabled in web.conf [settings]; not starting
+10-30-2023 15:31:32.114 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.250.37.237:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:31:49.278 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\mongod.log'.
+10-30-2023 15:31:49.278 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\remote_searches.log'.
+10-30-2023 15:31:49.278 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\scheduler.log'.
+10-30-2023 15:31:49.278 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\searchhistory.log'.
+10-30-2023 15:31:51.640 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\search_messages.log'.
+10-30-2023 15:31:51.642 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\license_usage_summary.log'.
+10-30-2023 15:31:51.644 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\splunkd_ui_access.log'.
+10-30-2023 15:31:52.350 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\btool.log'.
+10-30-2023 15:31:52.352 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\license_usage.log'.
+10-30-2023 15:31:52.355 +0900 INFO  WatchedFile [6408 tailreader0] - File too small to check seekcrc, probably truncated.  Will re-read entire file='C:\Program Files\SplunkUniversalForwarder\var\log\splunk\mergebuckets.log'.
+10-30-2023 15:31:54.029 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:32:00.556 +0900 WARN  DispatchReaper [14360 DispatchReaper] - Received shutdown signal during startup reaping and did not complete all reaping tasks. Reaping will be performed upon next startup.
+10-30-2023 15:32:00.556 +0900 INFO  FileAndDirectoryEliminator [14360 DispatchReaper] - Enabled
+10-30-2023 15:32:03.689 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:32:34.220 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:33:04.637 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:33:30.843 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=3.115.165.219:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:33:33.958 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:34:04.136 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:34:34.348 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:35:03.743 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:35:30.597 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.199.174.86:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:35:34.143 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:36:04.478 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:36:33.651 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:37:03.813 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:37:30.440 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=3.115.165.219:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:37:34.213 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:38:04.379 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:38:34.559 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:39:03.693 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:39:30.319 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.250.37.237:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:39:33.816 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:40:04.007 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:40:34.345 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:41:04.511 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:41:30.154 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.199.174.86:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:41:34.663 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:42:03.839 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:42:33.957 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:43:04.349 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:43:30.123 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.250.37.237:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:43:33.668 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:44:03.789 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:44:34.181 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:45:04.517 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:45:29.897 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=3.115.165.219:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:45:33.680 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:46:03.780 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:46:33.911 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:47:04.274 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:47:29.802 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.199.174.86:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:47:34.398 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:48:03.688 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:48:34.061 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:49:04.425 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:49:29.418 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - After randomization, current is first in the list. Swapping with last item
+10-30-2023 15:49:29.731 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=3.115.165.219:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:49:33.768 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:50:04.053 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:50:34.227 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:51:04.386 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:51:29.583 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.250.37.237:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:51:34.485 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:52:04.645 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:52:33.780 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:53:04.130 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:53:29.493 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.199.174.86:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:53:34.388 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:54:03.706 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:54:34.061 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:55:04.383 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:55:29.352 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.250.37.237:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:55:34.492 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:56:04.585 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:56:33.684 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:57:04.122 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:57:29.237 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=3.115.165.219:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:57:34.483 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:58:04.600 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:58:33.745 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:59:04.077 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 15:59:29.195 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.199.174.86:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 15:59:34.443 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:00:04.576 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:00:33.869 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:01:03.813 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:01:29.052 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.250.37.237:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 16:01:34.176 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:02:04.456 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:02:33.715 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:03:03.854 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:03:28.977 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.199.174.86:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 16:03:33.986 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:04:04.372 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:04:33.730 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:05:04.057 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:05:28.882 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=3.115.165.219:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 16:05:34.293 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:06:04.461 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:06:33.785 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:07:04.118 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:07:28.407 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - After randomization, current is first in the list. Swapping with last item
+10-30-2023 16:07:28.767 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.250.37.237:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 16:07:34.431 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:08:03.776 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:08:34.079 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:09:04.438 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:09:28.595 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=54.199.174.86:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 16:09:33.742 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:10:03.916 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:10:34.260 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:11:04.339 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'
+10-30-2023 16:11:28.456 +0900 INFO  AutoLoadBalancedConnectionStrategy [8264 TcpOutEloop] - Connected to idx=3.115.165.219:9997:0, pset=0, reuse=0. using ACK. autoBatch=1
+10-30-2023 16:11:34.589 +0900 INFO  TailReader [6408 tailreader0] - Batch input finished reading file='C:\Program Files\SplunkUniversalForwarder\var\spool\splunk\tracker.log'

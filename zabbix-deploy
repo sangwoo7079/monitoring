@@ -1,1 +1,248 @@
+mysql
+------------------
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: zabbix-mysql
+  namespace: zbx
+  labels:
+    app: zabbix-mysql
+spec:
+  serviceName: mysql-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: zabbix-mysql
+  template:
+    metadata:
+      labels:
+        app: zabbix-mysql
+    spec:
+      containers:
+      - name: zabbix-mysql
+        image: mysql:8.0.31
+        args:
+        - --default-authentication-plugin=mysql_native_password
+        - --character-set-server=utf8
+        - --collation-server=utf8_bin
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: zabbix
+        - name: MYSQL_DATABASE
+          value: zabbix
+        - name: MYSQL_USER
+          value: zabbix
+        - name: MYSQL_PASSWORD
+          value: zabbix
+        - name: MYSQL_LOG_BIN_EXPIRE
+          value: "604800"
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - name: mysql-data
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysql-data
+        persistentVolumeClaim:
+          claimName: zbx-pvc
+
+---
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: zbx-sc
+  namespace: zbx
+provisioner: docker.io/hostpath
+reclaimPolicy: Retain
+
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  namespace: zbx
+  name: zbx-pv
+  labels:
+    type: local
+    app: zabbix-mysql
+spec:
+  storageClassName: zbx-sc
+  capacity:
+    storage: 100Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: 172.29.226.221
+    path: /data/zabbix
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  namespace: zbx
+  name: zbx-pvc
+  labels:
+    app: zabbix-mysql
+spec:
+  storageClassName: zbx-sc
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 100Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: zbx
+  name: mysql-service
+  labels:
+    app: mysql-server
+spec:
+  type: ClusterIP
+  ports:
+    - port: 3306
+  selector:
+    app: zabbix-mysql
+
+-----------------------
+server
+-----------------------
+apiVersion:  apps/v1
+kind: Deployment
+metadata:
+  namespace: zbx
+  annotations:
+  labels:
+    zabbix-app: zabbix-server
+  name: zabbix-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      zabbix-app: zabbix-server
+  #strategy:
+  #  type: Recreate
+  template:
+    metadata:
+      labels:
+        zabbix-app: zabbix-server
+    spec:
+      containers:
+      - image: zabbix/zabbix-server-mysql:latest
+        name: zabbix-server
+        env:
+          - name: DB_SERVER_HOST
+            value: mysql-service
+          - name: MYSQL_ROOT_PASSWORD
+            value: zabbix
+          - name: MYSQL_DATABASE
+            value: zabbix
+          - name: MYSQL_USER
+            value: zabbix
+          - name: MYSQL_PASSWORD
+            value: zabbix
+        ports:
+        - containerPort: 10051
+      restartPolicy: Always
+
+#### Service
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: zbx
+  labels:
+    zabbix-app: zabbix-server
+  name: zabbix-server
+spec:
+  ports:
+  - name: "10051"
+    port: 10051
+    targetPort: 10051
+  selector:
+    zabbix-app: zabbix-server
+status:
+  loadBalancer: {}
+
+
+---------------------------
+web
+--------------------------
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: zbx
+  creationTimestamp: null
+  labels:
+    zabbix-app: zabbix-server
+  name: zabbix-web-nginx-mysql
+spec:
+  selector:
+    matchLabels:
+      zabbix-app: zabbix-server
+      #serviceName: "zabbix-web-nginx-mysql"
+  replicas: 1
+  #strategy:
+  #  type: Recreate
+  template:
+    metadata:
+      labels:
+        zabbix-app: zabbix-server
+    spec:
+      containers:
+      - env:
+        - name: DB_SERVER_HOST
+          value: mysql-service
+        - name: MYSQL_DATABASE
+          value: zabbix
+        - name: MYSQL_ROOT_PASSWORD
+          value: zabbix
+        - name: MYSQL_PASSWORD
+          value: zabbix
+        - name: MYSQL_ROOT_PASSWORD
+          value: zabbix
+        - name: ZBX_SERVER_HOST
+          value: zabbix-server
+        - name: ZBX_SERVER_NAME
+          value: zabbix-server
+        - name: ZBX_HOSTNAME
+          value: Zabbix
+        image: zabbix/zabbix-web-nginx-mysql:latest
+        livenessProbe:
+          exec:
+            command:
+            - curl
+            - -f
+            - http://localhost
+          failureThreshold: 3
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+        name: zabbix-web-nginx-mysql
+        ports:
+        - containerPort: 8080
+        resources: {}
+### Service
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: zbx
+  annotations:
+  creationTimestamp: null
+  labels:
+    zabbix-app: zabbix-server
+  name: zabbix-web-nginx-mysql
+spec:
+  ports:
+  - name: "80"
+    port: 80
+    targetPort: 8080
+  selector:
+    zabbix-app: zabbix-server
+status:
+  loadBalancer: {}
+
 

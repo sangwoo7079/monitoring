@@ -71,7 +71,7 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 172.29.226.221
+    server: 0.0.0.0
     path: /data/zabbix
 
 ---
@@ -109,7 +109,7 @@ spec:
 server
 -----------------------
 apiVersion:  apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   namespace: zbx
   annotations:
@@ -117,7 +117,8 @@ metadata:
     zabbix-app: zabbix-server
   name: zabbix-server
 spec:
-  replicas: 1
+  serviceName: "zabbix-server"
+  replicas: 2
   selector:
     matchLabels:
       zabbix-app: zabbix-server
@@ -142,6 +143,43 @@ spec:
             value: zabbix
           - name: MYSQL_PASSWORD
             value: zabbix
+          - name: PHP_TZ
+            value: Asia/Seoul
+          - name: ZBX_DEBUGLEVEL
+            value: "4"
+          - name: ZBX_CACHESIZE
+            value: "1024M"
+          - name: ZBX_TRENDCACHESIZE
+            value: "1024M"
+          - name: ZBX_HISTORYCACHESIZE
+            value: "2048M"
+          - name: ZBX_HISTORYINDEXCACHESIZE
+            value: "1024M"
+          - name: ZBX_STARTTRAPPERS
+            value: "5"
+          - name: ZBX_STARTPREPROCESSORS
+            value: "10"
+          - name: ZBX_STARTDBSYNCERS
+            value: "10"
+          - name: ZBX_JAVAGATEWAY_ENABLE
+            value: "true"
+          - name: ZBX_STARTJAVAPOLLERS
+            value: "5"
+          - name: ZBX_ENABLE_SNMP_TRAPS
+            value: "true"
+          - name: ZBX_STARTPROXYPOLLERS
+            value: "5"
+          - name: ZBX_PROXYCONFIGFREQUENCY
+            value: "60"
+          # For HA mode
+          - name: ZBX_AUTOHANODENAME
+            value: "fqdn"
+          - name: ZBX_AUTONODEADDRESS
+            value: "fqdn"
+          - name: ZBX_SERVICEMANAGERSYNCFREQUENCY
+            value: "10"
+          - name: ZBX_PROBLEMHOUSEKEEPINGFREQUENCY
+            value: "60"
         ports:
         - containerPort: 10051
       restartPolicy: Always
@@ -165,7 +203,6 @@ spec:
 status:
   loadBalancer: {}
 
-
 ---------------------------
 web
 --------------------------
@@ -175,12 +212,12 @@ metadata:
   namespace: zbx
   creationTimestamp: null
   labels:
-    zabbix-app: zabbix-server
-  name: zabbix-web-nginx-mysql
+    zabbix-app: zabbix-web
+  name: zabbix-web
 spec:
   selector:
     matchLabels:
-      zabbix-app: zabbix-server
+      zabbix-app: zabbix-web
       #serviceName: "zabbix-web-nginx-mysql"
   replicas: 1
   #strategy:
@@ -188,7 +225,7 @@ spec:
   template:
     metadata:
       labels:
-        zabbix-app: zabbix-server
+        zabbix-app: zabbix-web
     spec:
       containers:
       - env:
@@ -204,22 +241,10 @@ spec:
           value: zabbix
         - name: ZBX_SERVER_HOST
           value: zabbix-server
-        - name: ZBX_SERVER_NAME
-          value: zabbix-server
         - name: ZBX_HOSTNAME
           value: Zabbix
         image: zabbix/zabbix-web-nginx-mysql:latest
-        livenessProbe:
-          exec:
-            command:
-            - curl
-            - -f
-            - http://localhost
-          failureThreshold: 3
-          initialDelaySeconds: 30
-          periodSeconds: 10
-          timeoutSeconds: 5
-        name: zabbix-web-nginx-mysql
+        name: zabbix-web
         ports:
         - containerPort: 8080
         resources: {}
@@ -233,15 +258,20 @@ metadata:
   annotations:
   creationTimestamp: null
   labels:
-    zabbix-app: zabbix-server
-  name: zabbix-web-nginx-mysql
+    zabbix-app: zabbix-web
+  name: zabbix-web
 spec:
   ports:
   - name: "80"
     port: 80
     targetPort: 8080
+  - name: "443"
+    port: 443
+    targetPort: 8443
   selector:
-    zabbix-app: zabbix-server
+    zabbix-app: zabbix-web
+  type: LoadBalancer
+  loadBalancerIP: 0.0.0.0
 status:
   loadBalancer: {}
 
